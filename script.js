@@ -4,9 +4,9 @@ SC.initialize({
 
 $(document).ready(function() {
 
-  SC.get('/tracks', {genre: 'rock'}, function(tracks) {
+  SC.get('/tracks', {genres: 'punk'}, function(tracks) {
     $(tracks).each(function(index, track) {
-      $('#results').append($('<li></li>').html(track.title + ' - ' + track.genre));
+      $('#results').append($('<li></li>').html(track.permalink_url + track.title + ' - ' + track.genre));
     });
   });
 });
